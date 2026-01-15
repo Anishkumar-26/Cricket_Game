@@ -9,59 +9,73 @@
     <h1>Bat Ball Stump Game</h1>
     <button onclick ="
     let computerChoice = generateComputerChoice();
-
-    let resultMSG;
-    if (computerChoice === 'Bat'){
-        resultMSG = 'It\'s a Tie! Both chose Bat.';
-    } else if (computerChoice === 'Ball'){
-        resultMSG = 'You Win! Bat beats Ball.';
-    } else {
-        resultMSG = 'You Lose! Stump beats Bat.';
-    }
-    alert(`you have chosen Bat. Computer chose is  ${computerChoice} and  ${resultMSG}`);
+    let resultMSG = getResult('Bat', computerChoice);
+    showResult ('Bat', computerChoice, resultMSG);
     ">Bat</button>
 
 
     <button onclick ="
     computerChoice = generateComputerChoice();
-    
-    if (computerChoice === 'Ball'){
-        resultMSG = 'It\'s a Tie! Both chose Ball.';
-    } else if (computerChoice === 'stump'){
-        resultMSG = 'You Win! Ball beats Stump.';
-    } else {
-        resultMSG = 'Computer won! Bat beats Ball.';
-    }
-    alert(`you have chosen Ball. Computer chose is  ${computerChoice} and  ${resultMSG}`);
+    resultMSG = getResult('Ball', computerChoice);
+    showResult ('Ball', computerChoice, resultMSG);
     ">Ball</button>
 
 
     <button onclick ="
     computerChoice = generateComputerChoice();
-    
-    if (computerChoice === 'Stump'){
-        resultMSG = 'It\'s a Tie! Both chose Stump.';
-    } else if (computerChoice === 'Ball'){
-        resultMSG = 'Computer won! Ball beats Stump.';
-    } else {
-        resultMSG = 'You won! Bat beats Stump.';
-    }
-    alert(`you have chosen stump. Computer chose is  ${computerChoice} and  ${resultMSG}`);
+    resultMSG = getResult('Stump', computerChoice);
+    showResult ('Stump', computerChoice, resultMSG);
     ">Stump</button>
 
 
-    <script>
-//this will generate a random number between 1 and 3
-    function generateComputerChoice(){   
-     let randomNumber = Math.random()*3;
-    if (randomNumber > 0 && randomNumber <=1){
-        return 'Bat';
-    } else if (randomNumber >1 && randomNumber <=2){
-        return 'Ball';
-    } else {
-        return 'Stump';
+<script>
+    //this will generate a random number between 1 and 3
+        function generateComputerChoice(){   
+            let randomNumber = Math.random()*3;
+                if (randomNumber > 0 && randomNumber <=1){
+                    return 'Bat';
+                } else if (randomNumber >1 && randomNumber <=2){
+                    return 'Ball';
+                } else {
+                    return 'Stump';
+                }
+        }
+
+        function getResult(usermove, computermove){
+            if(usermove === 'Bat' ){
+                if (computermove === 'Bat'){
+                    return 'It\'s a Tie! Both chose Bat.';
+                } else if (computermove === 'Ball'){
+                    return 'You Win! Bat beats Ball.';
+                } else if (computermove === 'Stump'){
+                    return 'You Lose! Stump beats Bat.';
+                }
+
+            }else if (usermove === 'Ball'){
+                if (computermove === 'Ball'){
+                    return 'It\'s a Tie! Both chose Ball.';
+                } else if (computermove === 'Stump'){
+                    return 'You Win! Ball beats Stump.';
+                } else if (computermove === 'Bat'){
+                    return 'Computer won! Bat beats Ball.';
+                }
+
+            }else{
+                if (computermove === 'Stump'){
+                    return 'It\'s a Tie! Both chose Stump.';
+                } else if (computermove === 'Ball'){
+                    return 'Computer won! Ball beats Stump.';
+                } else if (computermove === 'Bat'){
+                    return 'You won! Bat beats Stump.';
+                }
+
+            }
     }
+    function showResult(usermove,computermove,result){
+        alert(`you have chosen ${usermove}. Computer chose is  ${computermove} and  ${result}`);
+
     }
+
     </script>
 </body>
 </html>
