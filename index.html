@@ -32,7 +32,10 @@
     let score = {
         win: 0,
         loss: 0,
-        tie: 0
+        tie: 0,
+        displayScore: function(){
+            return `Wins: ${score.win} | Losses: ${score.loss} | Ties: ${score.tie}`;
+        }
     };
 
     //this will generate a random number between 1 and 3
@@ -92,7 +95,7 @@
         
         ${result}
         
-        Wins: ${score.win} | Losses: ${score.loss} | Ties: ${score.tie}`);
+        ${score.displayScore()}`);
 
     }
 
