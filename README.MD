@@ -1,8 +1,8 @@
 # 🏏 Bat Ball Stump Game
 
-A simple browser-based mini game inspired by the classic Bat-Ball-Stump concept, built using **HTML** and **JavaScript**.
+A simple browser-based mini game inspired by the classic Bat-Ball-Stump concept, built using **HTML**,CSS and **JavaScript**.
 
-This project helped me practice JavaScript fundamentals, game logic, and browser storage.
+This project helped me practice JavaScript fundamentals, game logic, along with basic ID design and browser storage.
 
 ---
 
@@ -13,12 +13,14 @@ This project helped me practice JavaScript fundamentals, game logic, and browser
 - 💾 Score stored using **localStorage**
 - 🔄 Score survives browser refresh
 - ♻ Reset button to clear stored score
+- 🎨 Clean and responsive UI using CSS
 
 ---
 
 ## 🛠 Technologies Used
 
 - HTML5
+- CSS3
 - JavaScript (Vanilla JS)
 - Browser LocalStorage
 
@@ -30,6 +32,8 @@ This project helped me practice JavaScript fundamentals, game logic, and browser
 - Random number generation
 - Object usage in JavaScript
 - Using localStorage for data persistence
+- Separating JavaScript into external files
+- Basic UI styling with CSS
 - Writing meaningful GitHub commits
 
 ## 🔗 Project Link
