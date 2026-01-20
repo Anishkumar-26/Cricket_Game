@@ -4,12 +4,27 @@ A simple browser-based mini game inspired by the classic Bat-Ball-Stump concept,
 
 This project helped me practice JavaScript fundamentals, game logic, along with basic ID design and browser storage.
 
+    ---folder structure---
+
+Cricket_Game/
+│
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── assets/
+    ├── bat.png
+    ├── ball.png
+    ├── stump.png
+    └── preview.png
+
 ---
 
 ## 🚀 Features
 
 - 🎮 Play Bat, Ball, or Stump against the computer
 - 🤖 Computer choice generated randomly
+- 🖼 Image-based buttons for Bat, Ball, and Stump
 - 💾 Score stored using **localStorage**
 - 🔄 Score survives browser refresh
 - ♻ Reset button to clear stored score
@@ -35,6 +50,14 @@ This project helped me practice JavaScript fundamentals, game logic, along with 
 - Separating JavaScript into external files
 - Basic UI styling with CSS
 - Writing meaningful GitHub commits
+
+---
+
+## 📸 Preview
+
+![Game Preview](assets/preview.png)
+
+---
 
 ## 🔗 Project Link
 
