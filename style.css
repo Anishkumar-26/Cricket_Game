@@ -56,3 +56,15 @@ button:hover {
 .reset:hover {
   background: #c0392b;
 }
+
+.result {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.result h3 {
+  margin: 6px 0;
+  color: #1e3c72;
+  font-size: 15px;
+}
+

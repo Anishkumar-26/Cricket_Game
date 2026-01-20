@@ -9,8 +9,10 @@ let scoreStr = localStorage.getItem('Score');
         tie: 0,
     };
     score.displayScore = function(){
-        return `Wins: ${this.win}, Losses: ${this.loss}, Ties: ${this.tie}`;
+        return `Score: Wins: ${score.win}, Losses: ${score.loss}, Ties: ${score.tie}`;
     };
+
+    showResult();
     }
     
 //this will generate a random number between 1 and 3
@@ -65,13 +67,16 @@ let scoreStr = localStorage.getItem('Score');
             }
     }
     function showResult(usermove,computermove,result){
-        
-        //console.log(score);
+         //console.log(score);
         localStorage.setItem('Score' , JSON.stringify(score));
-        alert(`You have chosen ${usermove}. Computer chose is  ${computermove}
-        
-        ${result}
-        
-        ${score.displayScore()}`);
+        document.querySelector('#user-move').innerText = 
+            usermove ? `You have chose ${usermove}`:
+            '';
+        document.querySelector('#computer-move').innerText =
+            computermove ? `Computer chose ${computermove}`:
+            '';
+        document.querySelector('#result').innerText = 
+        result || '';
+        document.querySelector('#score').innerText = score.displayScore();
 
     }
